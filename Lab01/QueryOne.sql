@@ -14,3 +14,8 @@ go
 /*Ver listado de tablas de una base de datos*/
 USE AdventureWorks2016
 select name from sys.tables;
+
+/* Ver listado de Vistas de una base de Datos */
+USE AdventureWorks2016;
+SELECT name from sys.views;
+go
