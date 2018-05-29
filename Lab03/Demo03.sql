@@ -1,29 +1,47 @@
-use AdventureWorks2016
+SELECT * FROM VENTA;
 
-SELECT * FROM Person.Person
-CREATE VIEW vw_Persona
-as 
-SELECT firstName, LastName
-FROM Person.Person
 
-SELECT * FROM vw_Persona
+/* INNER */
+SELECT *
+FROM CLIENTE
+INNER JOIN VENTA
+ON CLIENTE.idCliente = VENTA.CLIENTE_idCliente;
 
-CREATE VIEW vw_Persona2
-as 
-SELECT firstName, LastName
-FROM Person.Person
-where LastName like 'Adams'
+/* LEFT */
+SELECT *
+FROM EMPLEADO
+LEFT JOIN VENTA
+ON EMPLEADO.idEmpleado = VENTA.EMPLEADO_idEmpleado;
 
-SELECT * FROM vw_Persona2
+/* RIGHT */
+SELECT *
+FROM EMPLEADO
+RIGHT JOIN VENTA
+ON EMPLEADO.idEmpleado = VENTA.EMPLEADO_idEmpleado;
 
-CREATE VIEW vw_Persona3
-as 
-SELECT
-CONCAT (FirstName,',',LastName) as Datos
-FROM Person.Person
-where LastName like 'Adams'
+/* OUTER JOIN */
+SELECT EMPLEADO.nombre ,EMPLEADO.apellido ,TIPO_EMPLEADO.nombre
+FROM EMPLEADO
+FULL OUTER JOIN TIPO_EMPLEADO
+ON EMPLEADO.nombre =    TIPO_EMPLEADO.nombre;
 
-SELECT * FROM vw_Persona3
 
+/* FUNCIONES ESCALARES */
+
+
+create function V_VENTA
+(
+@PRECIO1 int,
+@PRECIO2 int
+)
+returns int
+as
+begin
+    declare @totalVenta int
+    set @totalVenta = @PRECIO1+@PRECIO2
+    return @totalVenta
+    end;
+
+ select dbo.V_VENTA(80,80) as totalVenta;
 
 
