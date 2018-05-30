@@ -17,6 +17,10 @@ select * FROM vw_Pregunta1
 SELECT * FROM HumanResources.EmployeeDepartmentHistory
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61543d02229e074d599ff31cdd261dce529291cf
 /* ¿Se necesita listar las cantidades de ventas realizadas por año? */
 CREATE VIEW vw_Pregunta3
 AS
