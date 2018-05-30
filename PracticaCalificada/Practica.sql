@@ -108,4 +108,5 @@ FROM HumanResources.EmployeeDepartmentHistory
 /* Muestrame el listado de clientes que hicieron su orden de compra en los meses de noviembre y diciembre del año 2012 */
 
 
+
 /* Muestrame la cantidad de ordenes de pedido atentidos por cada medio de envio */
