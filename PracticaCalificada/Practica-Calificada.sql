@@ -16,7 +16,7 @@ select * FROM vw_Pregunta1
 /* ¿Se necesita saber la cantidad de empleados por departamento? */
 
 
-select * From vw_Pregunta2
+
 /* ¿Se necesita listar las cantidades de ventas realizadas por año? */
 CREATE VIEW vw_Pregunta3
 AS
