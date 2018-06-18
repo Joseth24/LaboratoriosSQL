@@ -37,7 +37,7 @@ WHEN Sales.SalesTerritory.CountryRegionCode = 'DE' THEN 'Alemania'
 WHEN Sales.SalesTerritory.CountryRegionCode = 'FR' THEN 'Francia'
 WHEN Sales.SalesTerritory.CountryRegionCode = 'GB' THEN 'Inglaterra'
 WHEN Sales.SalesTerritory.CountryRegionCode = 'CA' THEN 'Canada'
-ENd
+END
 ,
 Sales.SalesTerritory.Name as 'Estado' , 
 COUNT(Sales.SalesOrderHeader.TerritoryID) 
